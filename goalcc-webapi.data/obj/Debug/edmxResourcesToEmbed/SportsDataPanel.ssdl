@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SportsDataPanelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ContestGroups">
+    <Key>
+      <PropertyRef Name="ContestGroupId" />
+    </Key>
+    <Property Name="ContestGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SystemId" Type="bigint" />
+    <Property Name="SportId" Type="smallint" Nullable="false" />
+    <Property Name="LeagueId" Type="int" Nullable="false" />
+    <Property Name="SeasonId" Type="smallint" Nullable="false" />
+    <Property Name="CountryId" Type="smallint" />
+    <Property Name="SportOrganizationId" Type="smallint" />
+    <Property Name="GenderId" Type="smallint" Nullable="false" />
+    <Property Name="LeagueTypeId" Type="smallint" Nullable="false" />
+    <Property Name="LTTypeAndSurfaceId" Type="smallint" />
+    <Property Name="ContestTypeId" Type="smallint" />
+    <Property Name="ContestGroupName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ShortCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileShortName" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsInternational" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsLive" Type="bit" Nullable="false" />
+    <Property Name="Ranking" Type="nvarchar" MaxLength="50" />
+    <Property Name="HasTable" Type="bit" />
+    <Property Name="NameEnglish" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameDanish" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameNorwegian" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameSwedish" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameDeutsche" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameItalian" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameSpanish" Type="nvarchar" MaxLength="200" />
+    <Property Name="NameSerbian" Type="nvarchar" MaxLength="200" />
+    <Property Name="SportCCContestGroupId" Type="nvarchar" MaxLength="15" />
+    <Property Name="CrawlerLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AutoUpdateMatches" Type="bit" />
+    <Property Name="SharkScoresId" Type="int" />
+    <Property Name="Goals" Type="bit" />
+    <Property Name="Cards" Type="bit" />
+    <Property Name="Subs" Type="bit" />
+    <Property Name="Lineups" Type="bit" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="Finished" Type="bit" />
+    <Property Name="WinPoints" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="WinETPenPoints" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="LossPoints" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="LossETPenPoints" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="change_stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="TotalContestTeams" Type="int" />
+    <Property Name="LeagueNote" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Bet365LeagueId" Type="int" />
+    <Property Name="FixtureLink1" Type="nvarchar" MaxLength="500" />
+    <Property Name="FixtureLink2" Type="nvarchar" MaxLength="500" />
+    <Property Name="FixtureLink3" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="LeagueTableCompetitors">
+    <Key>
+      <PropertyRef Name="LeagueTableCompetitorId" />
+    </Key>
+    <Property Name="LeagueTableCompetitorId" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeagueTableId" Type="int" Nullable="false" />
+    <Property Name="TeamId" Type="int" Nullable="false" />
+    <Property Name="Place" Type="smallint" Nullable="false" />
+    <Property Name="PointsAdjustment" Type="int" />
+    <Property Name="change_stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="LeagueTableMatches">
+    <Key>
+      <PropertyRef Name="LeagueTableMatchId" />
+    </Key>
+    <Property Name="LeagueTableMatchId" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LeagueTableCompetitorId" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Played" Type="smallint" Nullable="false" />
+    <Property Name="Won" Type="smallint" Nullable="false" />
+    <Property Name="Draws" Type="smallint" Nullable="false" />
+    <Property Name="Lost" Type="smallint" Nullable="false" />
+    <Property Name="Scored" Type="smallint" Nullable="false" />
+    <Property Name="Conceded" Type="smallint" Nullable="false" />
+    <Property Name="Difference" Type="smallint" Nullable="false" />
+    <Property Name="Points" Type="smallint" Nullable="false" />
+    <Property Name="Type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="change_stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="WinOT" Type="smallint" />
+    <Property Name="WinPen" Type="smallint" />
+    <Property Name="LostOT" Type="smallint" />
+    <Property Name="LostPen" Type="smallint" />
+  </EntityType>
+  <EntityType Name="LeagueTables">
+    <Key>
+      <PropertyRef Name="LeagueTableId" />
+    </Key>
+    <Property Name="LeagueTableId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContestGroupId" Type="int" Nullable="false" />
+    <Property Name="SeasonId" Type="smallint" Nullable="false" />
+    <Property Name="AutoCalculate" Type="bit" />
+    <Property Name="change_stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Sports">
+    <Key>
+      <PropertyRef Name="SportId" />
+    </Key>
+    <Property Name="SportId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SystemId" Type="smallint" />
+    <Property Name="SportName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SportCCSportId" Type="smallint" />
+    <Property Name="change_stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SystemId" Type="bigint" />
+    <Property Name="SportId" Type="smallint" Nullable="false" />
+    <Property Name="CountryId" Type="smallint" />
+    <Property Name="GenderId" Type="smallint" Nullable="false" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TeamCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="TeamShortName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileShortName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsNationalTeam" Type="bit" Nullable="false" />
+    <Property Name="TeamNameEnglish" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameDanish" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameNorwegian" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameSwedish" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameDeutsch" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameItalian" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameSpanish" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamNameSerbian" Type="nvarchar" MaxLength="50" />
+    <Property Name="SportCCTeamId" Type="nvarchar" MaxLength="15" />
+    <Property Name="OddsDBTeamId" Type="int" />
+    <Property Name="TeamImage" Type="nvarchar" MaxLength="500" />
+    <Property Name="FlashScoresTeamName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SportingLifeTeamName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SoccerwayTeamId" Type="bigint" />
+    <Property Name="CreatedByRole" Type="nvarchar" MaxLength="256" />
+    <Property Name="SquadLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SharkScoresId" Type="int" />
+    <Property Name="SharkScoresSquadLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Bet365TeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bet10TeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetBrightTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetAtHomeTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetClicTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetVictorTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetWayTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetCoralTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InterWettenTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LadBrokesTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MyBetTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UniBetTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="WinnerTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="YouWinTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BetFairTeamName" Type="nvarchar" MaxLength="200" />
+    <Property Name="LiveScoreTeamId" Type="int" />
+    <Property Name="GoalShowTeamId" Type="nvarchar" MaxLength="50" />
+    <Property Name="TitanBetTeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatsComTeamId" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_LeagueTableCompetitors_LeagueTables">
+    <End Role="LeagueTables" Type="Self.LeagueTables" Multiplicity="1" />
+    <End Role="LeagueTableCompetitors" Type="Self.LeagueTableCompetitors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeagueTables">
+        <PropertyRef Name="LeagueTableId" />
+      </Principal>
+      <Dependent Role="LeagueTableCompetitors">
+        <PropertyRef Name="LeagueTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeagueTableCompetitors_Teams">
+    <End Role="Teams" Type="Self.Teams" Multiplicity="1" />
+    <End Role="LeagueTableCompetitors" Type="Self.LeagueTableCompetitors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="LeagueTableCompetitors">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeagueTableMatches_LeagueTableCompetitors">
+    <End Role="LeagueTableCompetitors" Type="Self.LeagueTableCompetitors" Multiplicity="1" />
+    <End Role="LeagueTableMatches" Type="Self.LeagueTableMatches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LeagueTableCompetitors">
+        <PropertyRef Name="LeagueTableCompetitorId" />
+      </Principal>
+      <Dependent Role="LeagueTableMatches">
+        <PropertyRef Name="LeagueTableCompetitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LeagueTables_ContestGroups">
+    <End Role="ContestGroups" Type="Self.ContestGroups" Multiplicity="1" />
+    <End Role="LeagueTables" Type="Self.LeagueTables" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContestGroups">
+        <PropertyRef Name="ContestGroupId" />
+      </Principal>
+      <Dependent Role="LeagueTables">
+        <PropertyRef Name="ContestGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teams_Sports">
+    <End Role="Sports" Type="Self.Sports" Multiplicity="1" />
+    <End Role="Teams" Type="Self.Teams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sports">
+        <PropertyRef Name="SportId" />
+      </Principal>
+      <Dependent Role="Teams">
+        <PropertyRef Name="SportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SportsDataPanelModelStoreContainer">
+    <EntitySet Name="ContestGroups" EntityType="Self.ContestGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeagueTableCompetitors" EntityType="Self.LeagueTableCompetitors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeagueTableMatches" EntityType="Self.LeagueTableMatches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeagueTables" EntityType="Self.LeagueTables" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sports" EntityType="Self.Sports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_LeagueTableCompetitors_LeagueTables" Association="Self.FK_LeagueTableCompetitors_LeagueTables">
+      <End Role="LeagueTables" EntitySet="LeagueTables" />
+      <End Role="LeagueTableCompetitors" EntitySet="LeagueTableCompetitors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeagueTableCompetitors_Teams" Association="Self.FK_LeagueTableCompetitors_Teams">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="LeagueTableCompetitors" EntitySet="LeagueTableCompetitors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeagueTableMatches_LeagueTableCompetitors" Association="Self.FK_LeagueTableMatches_LeagueTableCompetitors">
+      <End Role="LeagueTableCompetitors" EntitySet="LeagueTableCompetitors" />
+      <End Role="LeagueTableMatches" EntitySet="LeagueTableMatches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LeagueTables_ContestGroups" Association="Self.FK_LeagueTables_ContestGroups">
+      <End Role="ContestGroups" EntitySet="ContestGroups" />
+      <End Role="LeagueTables" EntitySet="LeagueTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teams_Sports" Association="Self.FK_Teams_Sports">
+      <End Role="Sports" EntitySet="Sports" />
+      <End Role="Teams" EntitySet="Teams" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SportsDataPanelModelStoreContainer" CdmEntityContainer="SportsDataPanelEntities">
+    <EntitySetMapping Name="Sports">
+      <EntityTypeMapping TypeName="SportsDataPanelModel.Sport">
+        <MappingFragment StoreEntitySet="Sports">
+          <ScalarProperty Name="SportId" ColumnName="SportId" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="SportName" ColumnName="SportName" />
+          <ScalarProperty Name="SportCCSportId" ColumnName="SportCCSportId" />
+          <ScalarProperty Name="change_stamp" ColumnName="change_stamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeagueTableCompetitors">
+      <EntityTypeMapping TypeName="SportsDataPanelModel.LeagueTableCompetitor">
+        <MappingFragment StoreEntitySet="LeagueTableCompetitors">
+          <ScalarProperty Name="change_stamp" ColumnName="change_stamp" />
+          <ScalarProperty Name="PointsAdjustment" ColumnName="PointsAdjustment" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="LeagueTableId" ColumnName="LeagueTableId" />
+          <ScalarProperty Name="LeagueTableCompetitorId" ColumnName="LeagueTableCompetitorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeagueTableMatches">
+      <EntityTypeMapping TypeName="SportsDataPanelModel.LeagueTableMatch">
+        <MappingFragment StoreEntitySet="LeagueTableMatches">
+          <ScalarProperty Name="LostPen" ColumnName="LostPen" />
+          <ScalarProperty Name="LostOT" ColumnName="LostOT" />
+          <ScalarProperty Name="WinPen" ColumnName="WinPen" />
+          <ScalarProperty Name="WinOT" ColumnName="WinOT" />
+          <ScalarProperty Name="change_stamp" ColumnName="change_stamp" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Difference" ColumnName="Difference" />
+          <ScalarProperty Name="Conceded" ColumnName="Conceded" />
+          <ScalarProperty Name="Scored" ColumnName="Scored" />
+          <ScalarProperty Name="Lost" ColumnName="Lost" />
+          <ScalarProperty Name="Draws" ColumnName="Draws" />
+          <ScalarProperty Name="Won" ColumnName="Won" />
+          <ScalarProperty Name="Played" ColumnName="Played" />
+          <ScalarProperty Name="LeagueTableCompetitorId" ColumnName="LeagueTableCompetitorId" />
+          <ScalarProperty Name="LeagueTableMatchId" ColumnName="LeagueTableMatchId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeagueTables">
+      <EntityTypeMapping TypeName="SportsDataPanelModel.LeagueTable">
+        <MappingFragment StoreEntitySet="LeagueTables">
+          <ScalarProperty Name="change_stamp" ColumnName="change_stamp" />
+          <ScalarProperty Name="AutoCalculate" ColumnName="AutoCalculate" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="ContestGroupId" ColumnName="ContestGroupId" />
+          <ScalarProperty Name="LeagueTableId" ColumnName="LeagueTableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="SportsDataPanelModel.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="change_stamp" ColumnName="change_stamp" />
+          <ScalarProperty Name="StatsComTeamId" ColumnName="StatsComTeamId" />
+          <ScalarProperty Name="TitanBetTeamName" ColumnName="TitanBetTeamName" />
+          <ScalarProperty Name="GoalShowTeamId" ColumnName="GoalShowTeamId" />
+          <ScalarProperty Name="LiveScoreTeamId" ColumnName="LiveScoreTeamId" />
+          <ScalarProperty Name="BetFairTeamName" ColumnName="BetFairTeamName" />
+          <ScalarProperty Name="YouWinTeamName" ColumnName="YouWinTeamName" />
+          <ScalarProperty Name="WinnerTeamName" ColumnName="WinnerTeamName" />
+          <ScalarProperty Name="UniBetTeamName" ColumnName="UniBetTeamName" />
+          <ScalarProperty Name="MyBetTeamName" ColumnName="MyBetTeamName" />
+          <ScalarProperty Name="LadBrokesTeamName" ColumnName="LadBrokesTeamName" />
+          <ScalarProperty Name="InterWettenTeamName" ColumnName="InterWettenTeamName" />
+          <ScalarProperty Name="BetCoralTeamName" ColumnName="BetCoralTeamName" />
+          <ScalarProperty Name="BetWayTeamName" ColumnName="BetWayTeamName" />
+          <ScalarProperty Name="BetVictorTeamName" ColumnName="BetVictorTeamName" />
+          <ScalarProperty Name="BetClicTeamName" ColumnName="BetClicTeamName" />
+          <ScalarProperty Name="BetAtHomeTeamName" ColumnName="BetAtHomeTeamName" />
+          <ScalarProperty Name="BetBrightTeamName" ColumnName="BetBrightTeamName" />
+          <ScalarProperty Name="Bet10TeamName" ColumnName="Bet10TeamName" />
+          <ScalarProperty Name="Bet365TeamName" ColumnName="Bet365TeamName" />
+          <ScalarProperty Name="SharkScoresSquadLink" ColumnName="SharkScoresSquadLink" />
+          <ScalarProperty Name="SharkScoresId" ColumnName="SharkScoresId" />
+          <ScalarProperty Name="SquadLink" ColumnName="SquadLink" />
+          <ScalarProperty Name="CreatedByRole" ColumnName="CreatedByRole" />
+          <ScalarProperty Name="SoccerwayTeamId" ColumnName="SoccerwayTeamId" />
+          <ScalarProperty Name="SportingLifeTeamName" ColumnName="SportingLifeTeamName" />
+          <ScalarProperty Name="FlashScoresTeamName" ColumnName="FlashScoresTeamName" />
+          <ScalarProperty Name="TeamImage" ColumnName="TeamImage" />
+          <ScalarProperty Name="OddsDBTeamId" ColumnName="OddsDBTeamId" />
+          <ScalarProperty Name="SportCCTeamId" ColumnName="SportCCTeamId" />
+          <ScalarProperty Name="TeamNameSerbian" ColumnName="TeamNameSerbian" />
+          <ScalarProperty Name="TeamNameSpanish" ColumnName="TeamNameSpanish" />
+          <ScalarProperty Name="TeamNameItalian" ColumnName="TeamNameItalian" />
+          <ScalarProperty Name="TeamNameDeutsch" ColumnName="TeamNameDeutsch" />
+          <ScalarProperty Name="TeamNameSwedish" ColumnName="TeamNameSwedish" />
+          <ScalarProperty Name="TeamNameNorwegian" ColumnName="TeamNameNorwegian" />
+          <ScalarProperty Name="TeamNameDanish" ColumnName="TeamNameDanish" />
+          <ScalarProperty Name="TeamNameEnglish" ColumnName="TeamNameEnglish" />
+          <ScalarProperty Name="IsNationalTeam" ColumnName="IsNationalTeam" />
+          <ScalarProperty Name="MobileShortName" ColumnName="MobileShortName" />
+          <ScalarProperty Name="TeamShortName" ColumnName="TeamShortName" />
+          <ScalarProperty Name="TeamCode" ColumnName="TeamCode" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="SportId" ColumnName="SportId" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContestGroups">
+      <EntityTypeMapping TypeName="SportsDataPanelModel.ContestGroup">
+        <MappingFragment StoreEntitySet="ContestGroups">
+          <ScalarProperty Name="FixtureLink3" ColumnName="FixtureLink3" />
+          <ScalarProperty Name="FixtureLink2" ColumnName="FixtureLink2" />
+          <ScalarProperty Name="FixtureLink1" ColumnName="FixtureLink1" />
+          <ScalarProperty Name="Bet365LeagueId" ColumnName="Bet365LeagueId" />
+          <ScalarProperty Name="LeagueNote" ColumnName="LeagueNote" />
+          <ScalarProperty Name="TotalContestTeams" ColumnName="TotalContestTeams" />
+          <ScalarProperty Name="change_stamp" ColumnName="change_stamp" />
+          <ScalarProperty Name="LossETPenPoints" ColumnName="LossETPenPoints" />
+          <ScalarProperty Name="LossPoints" ColumnName="LossPoints" />
+          <ScalarProperty Name="WinETPenPoints" ColumnName="WinETPenPoints" />
+          <ScalarProperty Name="WinPoints" ColumnName="WinPoints" />
+          <ScalarProperty Name="Finished" ColumnName="Finished" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Lineups" ColumnName="Lineups" />
+          <ScalarProperty Name="Subs" ColumnName="Subs" />
+          <ScalarProperty Name="Cards" ColumnName="Cards" />
+          <ScalarProperty Name="Goals" ColumnName="Goals" />
+          <ScalarProperty Name="SharkScoresId" ColumnName="SharkScoresId" />
+          <ScalarProperty Name="AutoUpdateMatches" ColumnName="AutoUpdateMatches" />
+          <ScalarProperty Name="CrawlerLink" ColumnName="CrawlerLink" />
+          <ScalarProperty Name="SportCCContestGroupId" ColumnName="SportCCContestGroupId" />
+          <ScalarProperty Name="NameSerbian" ColumnName="NameSerbian" />
+          <ScalarProperty Name="NameSpanish" ColumnName="NameSpanish" />
+          <ScalarProperty Name="NameItalian" ColumnName="NameItalian" />
+          <ScalarProperty Name="NameDeutsche" ColumnName="NameDeutsche" />
+          <ScalarProperty Name="NameSwedish" ColumnName="NameSwedish" />
+          <ScalarProperty Name="NameNorwegian" ColumnName="NameNorwegian" />
+          <ScalarProperty Name="NameDanish" ColumnName="NameDanish" />
+          <ScalarProperty Name="NameEnglish" ColumnName="NameEnglish" />
+          <ScalarProperty Name="HasTable" ColumnName="HasTable" />
+          <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+          <ScalarProperty Name="IsLive" ColumnName="IsLive" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsInternational" ColumnName="IsInternational" />
+          <ScalarProperty Name="MobileShortName" ColumnName="MobileShortName" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ContestGroupName" ColumnName="ContestGroupName" />
+          <ScalarProperty Name="ContestTypeId" ColumnName="ContestTypeId" />
+          <ScalarProperty Name="LTTypeAndSurfaceId" ColumnName="LTTypeAndSurfaceId" />
+          <ScalarProperty Name="LeagueTypeId" ColumnName="LeagueTypeId" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="SportOrganizationId" ColumnName="SportOrganizationId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="LeagueId" ColumnName="LeagueId" />
+          <ScalarProperty Name="SportId" ColumnName="SportId" />
+          <ScalarProperty Name="SystemId" ColumnName="SystemId" />
+          <ScalarProperty Name="ContestGroupId" ColumnName="ContestGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

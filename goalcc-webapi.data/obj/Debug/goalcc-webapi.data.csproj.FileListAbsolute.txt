@@ -1,0 +1,10 @@
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\goalcc-webapi.data.dll.config
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\goalcc-webapi.data.dll
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\goalcc-webapi.data.pdb
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\EntityFramework.dll
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\EntityFramework.xml
+D:\Office\Result Center\API\goalcc-webapi.data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Office\Result Center\API\goalcc-webapi.data\obj\Debug\goalcc-webapi.data.csprojResolveAssemblyReference.cache
+D:\Office\Result Center\API\goalcc-webapi.data\obj\Debug\goalcc-webapi.data.dll
+D:\Office\Result Center\API\goalcc-webapi.data\obj\Debug\goalcc-webapi.data.pdb
